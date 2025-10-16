@@ -62,7 +62,7 @@ def calculate_gpa(marks, credit_hours, grading_scale):
 
 def convert_to_grade_point(mark, scale):
  
-    if scale == "4.0 Scale (Pakistan)":
+    if scale == "4.0 Scale ":
         if mark >= 85:
             return 4.0, "A"
         elif mark >= 80:
@@ -174,7 +174,7 @@ def single_semester_gpa():
     with col1:
         grading_scale = st.selectbox(
             "Select Grading Scale",
-            ["4.0 Scale (Pakistan)", "Percentage Scale"],
+            ["4.0 Scale ", "Percentage Scale"],
             help="4.0 Scale: Standard Pakistani University System"
         )
     
@@ -279,7 +279,7 @@ def multiple_semesters_cgpa():
     # Grading scale selection
     grading_scale = st.selectbox(
         "Select Grading Scale",
-        ["4.0 Scale (Pakistan)", "Percentage Scale"],
+        ["4.0 Scale ", "Percentage Scale"],
         help="4.0 Scale: Standard Pakistani University System",
         key="cgpa_scale"
     )
